@@ -69,15 +69,15 @@ I split the data using train_test_split() from sklearn.model_selection library. 
  Then,I normalized the image data because I want the image data to be in the range from 0 to 1. 
  I have used ImageDataGenerator from Keras.preprocessing.image library to preprocess the data and augment it in real time. My ImageDataGenerator() argument values are given below
  
-         | Argument                     |      Value               |
-         |:----------------------------:|:------------------------:|
-         |featurewise_center            |     False                |
-         |featurewise_std_normalization |     False                |
-         |shear_range                   |     0.1                  |
-         |rotation_range                |     10.0                 |
-         |width_shift_range             |     0.1                  |
-         |height_shift_range            |     0.1                  |
-         |zoom_range                    |     0.2                  |
+   | Argument                     |      Value               |
+   |:----------------------------:|:------------------------:|
+   |featurewise_center            |     False                |
+   |featurewise_std_normalization |     False                |
+   |shear_range                   |     0.1                  |
+   |rotation_range                |     10.0                 |
+   |width_shift_range             |     0.1                  |
+   |height_shift_range            |     0.1                  |
+   |zoom_range                    |     0.2                  |
          
  
 
