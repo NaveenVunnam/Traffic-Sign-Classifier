@@ -114,9 +114,10 @@ To train the model, I have used 'categorical_crossentropy' as my loss fucntion, 
 
 While Training the model I have generated more data on the fly by keras preprocessing techniques. 
 I have used LearningRateScheduler from keras.callbacks library to select decaying learning rate over the epochs. I have used below function to decay the learning over the epochs.
+```
 def learning_rate(epoch):
     return 0.001*(0.1**int(epoch/10))
-
+```
 I have trained the model using below function in keras
 
 model.fit_generator(datagen.flow(X_train,y_train,batch_size=batch_size),steps_per_epoch=1500,epochs=epochs,validation_data=(X_validation,y_validation) , callbacks=[LearningRateScheduler(lr_schedule), ModelCheckpoint('model.h5',save_best_only=True)])
@@ -135,7 +136,7 @@ First, my parameters are like- Constant learning rate=0.001, epochs=30,batch_siz
 
 Later, I used decaying learning rate, epochs=10, batch_size=64, and removed two dropout layers, My  validation accuarcy was 94.87%
 
-When I set the steps_per_epoch=X_train.shape[0] and It took a lot of time to train the model. 
+When I set the `steps_per_epoch=X_train.shape[0]` and It took a lot of time to train the model. 
 
 After trying different values for parameters, finally I have used decaying learning rate, epochs=10, Batch_size=32, steps_per_epoch=1500, I have got a validation accuracy of 98.38%
 
