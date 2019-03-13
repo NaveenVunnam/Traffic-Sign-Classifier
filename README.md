@@ -65,9 +65,9 @@ Here is an exploratory visualization of the data set. It is a bar chart showing 
 #### 1. Describe how you preprocessed the image data. What techniques were chosen and why did you choose these techniques? Consider including images showing the output of each preprocessing technique. Pre-processing refers to techniques such as converting to grayscale, normalization, etc. (OPTIONAL: As described in the "Stand Out Suggestions" part of the rubric, if you generated additional data for training, describe why you decided to generate additional data, how you generated the data, and provide example images of the additional data. Then describe the characteristics of the augmented training set like number of images in the set, number of images for each class, etc.)
 
 
-I split the data using train_test_split() from sklearn.model_selection library. I have choosen 20% as test_size.  
+I split the data using `train_test_split()` from sklearn.model_selection library. I have choosen 20% as test_size.  
  Then,I normalized the image data because I want the image data to be in the range from 0 to 1. 
- I have used ImageDataGenerator from Keras.preprocessing.image library to preprocess the data and augment it in real time. My ImageDataGenerator() argument values are given below
+ I have used ImageDataGenerator from Keras.preprocessing.image library to preprocess the data and augment it in real time. My `ImageDataGenerator()` argument values are given below
  
    | Argument                     |      Value               |
    |:----------------------------:|:------------------------:|
@@ -83,7 +83,7 @@ I split the data using train_test_split() from sklearn.model_selection library. 
 
 
 #### 2. Describe what your final model architecture looks like including model type, layers, layer sizes, connectivity, etc.) Consider including a diagram and/or table describing the final model.
-I have used Keras.Sequential to design my model architecture. Sequential is a keras container fot linear stack of layers. Layers will do automatic shape inference expect the first layer, In the first layer I have provided the input shape as (32,32,3).
+I have used `Keras.Sequential` to design my model architecture. Sequential is a keras container fot linear stack of layers. Layers will do automatic shape inference expect the first layer, In the first layer I have provided the input shape as (32,32,3).
 
 
 I have designed a model with 6 convolutional layers and a fully connected layer. I have added one dropout layer to prevent overfitting. My output contains a softmax activation function to return the probabilties. 
@@ -110,7 +110,7 @@ My final model consisted of the following layers:
 
 
 
-To train the model, I have used 'categorical_crossentropy' as my loss fucntion, 'stochastic gradient descent(SGD)' as optimizer and metric is 'accuracy' and compiled the model using keras model.compile().
+To train the model, I have used `'categorical_crossentropy'` as my loss fucntion, `'stochastic gradient descent(SGD)'` as optimizer and metric is 'accuracy' and compiled the model using `keras model.compile()`.
 
 While Training the model I have generated more data on the fly by keras preprocessing techniques. 
 I have used LearningRateScheduler from keras.callbacks library to select decaying learning rate over the epochs. I have used below function to decay the learning over the epochs.
