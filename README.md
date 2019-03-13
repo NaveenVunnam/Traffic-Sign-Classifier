@@ -120,7 +120,7 @@ def learning_rate(epoch):
 ```
 I have trained the model using below function in keras
 
-`model.fit_generator(datagen.flow(X_train,y_train,batch_size=batch_size),steps_per_epoch=1500,epochs=epochs,validation_data=(X_validation,y_validation) , callbacks=[LearningRateScheduler(lr_schedule), ModelCheckpoint('model.h5',save_best_only=True)])`
+`model.fit_generator(datagen.flow(X_train,y_train,batch_size=batch_size),steps_per_epoch=1500,epochs=epochs,validation_data=(X_validation,y_validation), callbacks=[LearningRateScheduler(lr_schedule), ModelCheckpoint('model.h5',save_best_only=True)])`
 
 Hyper parameters used in the model are given below
 
