@@ -34,7 +34,7 @@ The goals / steps of this project are the following:
 [image14]: ./snipped/4.PNG "Prob 4"
 [image15]: ./snipped/5.PNG "Prob 5"
 [image16]: ./snipped/6.PNG "Prob 6"
-[image18]: learning_curve.PNG "Learning 1"
+
 
 ## Rubric Points
 ### Here I will consider the [rubric points](https://review.udacity.com/#!/rubrics/481/view) individually and describe how I addressed each point in my implementation.  
@@ -146,7 +146,7 @@ My final model results were:
 * validation set accuracy of 98.38% 
 
 Below I have provided the Learning curves 
-![alt text][image18]
+![alt text](learning_curve.png "Learning Curve")
  
 
 ### Test a Model on New Images
